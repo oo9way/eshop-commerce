@@ -1,3 +1,6 @@
 from django.db import models
+class Users(models.Model):
+    full_name = models.CharField(max_length=255)
 
-# Create your models here.
+    def __str__(self) -> str:
+        return self.full_name
